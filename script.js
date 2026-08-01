@@ -160,4 +160,42 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(typeChar, 400);
   }
 
+  // ─── 8. CONTACT FORM SUBMISSION ───
+  const contactForm = document.querySelector('.contact-right form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalContent = submitBtn.innerHTML;
+      
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Sending...';
+
+      setTimeout(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'Message Sent! &#10004;';
+        submitBtn.style.backgroundColor = '#28a745';
+        submitBtn.style.borderColor = '#28a745';
+
+        let statusMsg = contactForm.querySelector('.form-status');
+        if (!statusMsg) {
+          statusMsg = document.createElement('div');
+          statusMsg.className = 'form-status';
+          statusMsg.style.cssText = 'margin-top: 15px; padding: 12px; border-radius: 8px; background: #e6f4ea; color: #137333; font-weight: 500; font-size: 0.9rem; text-align: center; border: 1px solid #ceead6;';
+          contactForm.appendChild(statusMsg);
+        }
+        statusMsg.textContent = 'Thank you! Your message has been sent successfully. We will get back to you within 24 hours.';
+
+        contactForm.reset();
+
+        setTimeout(() => {
+          submitBtn.innerHTML = originalContent;
+          submitBtn.style.backgroundColor = '';
+          submitBtn.style.borderColor = '';
+          if (statusMsg) statusMsg.remove();
+        }, 5000);
+      }, 800);
+    });
+  }
+
 });
