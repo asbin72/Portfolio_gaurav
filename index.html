@@ -18,12 +18,24 @@
         <a href="#about">About Me</a>
         <a href="#contact">Contact</a>
       </nav>
-      <a href="#contact" class="btn btn-primary">Lets Start</a>
+      <a href="#contact" class="btn btn-primary nav-cta">Lets Start</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
     </div>
+    <nav class="mobile-menu" id="mobile-menu">
+      <a href="#home" class="active">Home</a>
+      <a href="#vision">Vision</a>
+      <a href="#about">About Me</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn btn-primary mobile-cta">Lets Start</a>
+    </nav>
   </header>
 
   <!-- ============ HERO SECTION ============ -->
-  <section class="card hero" id="home">
+  <section class="card hero section-wipe" id="home">
     <div class="hero-text">
       <p class="eyebrow">This Is</p>
       <h1 class="hero-title">
@@ -42,13 +54,15 @@
       <a href="#contact" class="btn btn-primary btn-arrow">Message Me <span>&rarr;</span></a>
     </div>
     <div class="hero-image">
-      <img style="height: auto; width: 100%;" src="image.png" alt="">
+      <img style="height: auto; width: 100%;" src="image.png" alt="Gaurav Kumar Tripathi">
     </div>
   </section>
 
+  <div class="section-divider"><span></span></div>
+
   <!-- ============ VISION SECTION ============ -->
-  <section class="card vision" id="vision">
-    <h2 class="vision-title">
+  <section class="card vision section-slide-blur" id="vision">
+    <h2 class="vision-title reveal">
       <span style="color: #191C1E;">
       OUR VISION IS TO EMPOWER <br>
       BUSINESSES THROUGH INNOVATIVE, <br>
@@ -58,23 +72,25 @@
 
     <div class="vision-body">
       <div class="vision-left">
-        <h4>Building Technology That Creates Long-Term Business Growth</h4>
-        <p>
+        <h4 class="reveal stagger-1">Building Technology That Creates Long-Term Business Growth</h4>
+        <p class="reveal stagger-2">
           Our vision is to become a trusted global software development
           company by delivering reliable digital solutions and building
           long-term partnerships.
         </p>
-        <p class="quote">Everything I teach comes from real experience not theory.</p>
+        <p class="quote reveal stagger-3">Everything I teach comes from real experience not theory.</p>
       </div>
-      <div class="vision-right">
-        <img src="Potfolio.png" alt="">
+      <div class="vision-right reveal-scale stagger-2">
+        <img src="Potfolio.png" alt="Vision">
       </div>
     </div>
   </section>
 
+  <div class="section-divider"><span></span></div>
+
   <!-- ============ STORY / TIMELINE SECTION ============ -->
-  <section class="card story" id="about">
-    <h2 class="story-title">
+  <section class="card story section-curtain" id="about">
+    <h2 class="story-title reveal">
       THE REAL STORY BEHIND THE <br>
       BUSINESSES, LESSONS, AND <br>
       SYSTEMS THAT DRIVE GROWTH
@@ -83,7 +99,7 @@
     <div class="timeline">
       <div class="timeline-line"></div>
 
-      <div class="timeline-item left">
+      <div class="timeline-item left reveal-left">
         <div class="timeline-content">
           <h5>THE BEGINNING</h5>
           <p>My entrepreneurial journey began with a dream to build something meaningful. While pursuing my B.Tech in Computer Science &amp; Engineering, I laid the foundation for a future in technology and innovation.</p>
@@ -92,7 +108,7 @@
         <div class="timeline-year">2020</div>
       </div>
 
-      <div class="timeline-item right">
+      <div class="timeline-item right reveal-right">
         <div class="timeline-year">2021-2025</div>
         <div style="background: #C2C6D5;" class="timeline-dot"></div>
         <div class="timeline-content">
@@ -101,7 +117,7 @@
         </div>
       </div>
 
-      <div class="timeline-item left">
+      <div class="timeline-item left reveal-left">
         <div class="timeline-content">
           <h5>TURNING VISION INTO REALITY</h5>
           <p>I shared my vision with my close friend, Akshit, and together we founded Kalpanaaa Software Solutions Pvt. Ltd. with a mission to develop innovative software, web, mobile, and AI-powered solutions for businesses.</p>
@@ -110,7 +126,7 @@
         <div class="timeline-year">2026</div>
       </div>
 
-      <div class="timeline-item right">
+      <div class="timeline-item right reveal-right">
         <div class="timeline-year">Today</div>
         <div class="timeline-dot"></div>
         <div class="timeline-content">
@@ -121,48 +137,64 @@
     </div>
   </section>
 
+  <div class="section-divider"><span></span></div>
+
   <!-- ============ CONTACT SECTION ============ -->
-  <section class="card contact" id="contact">
+  <section class="card contact section-zoom-blur" id="contact">
     <div class="contact-left">
-      <h2>Let's discuss your Project</h2>
-      <p class="contact-intro">
+      <h2 class="reveal">Let's discuss your Project</h2>
+      <p class="contact-intro reveal stagger-1">
         Share your vision, project requirements, or collaboration ideas, and
         let's build something exceptional together.
       </p>
 
-      <div class="contact-item">
-        <div class="contact-icon"><img src="boxicons--location.png" alt="" width="30px" style="padding-top: 20px;"></div>
+      <div class="contact-item reveal stagger-2">
+        <button class="contact-icon icon-btn" aria-label="Address Icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>
+        </button>
         <div style="text-align: left; justify-content: center;">
           <strong>Address:</strong>
           <p>Bloombuz Media Private Limited<br>2nd Floor, #822, 9th Main, 1st C Cross Rd, HRBR</p>
         </div>
       </div>
 
-      <div class="contact-item">
-        <div class="contact-icon"><img src="mdi--email-outline.png" alt="" width="30px" style="padding-bottom:10  ;"></div>
+      <div class="contact-item reveal stagger-3">
+        <button class="contact-icon icon-btn" aria-label="Email Icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </button>
         <div>
           <strong>My Email:</strong>
           <p>Founder@kalpanaaasoftwaresolutions.in</p>
         </div>
       </div>
 
-      <div class="contact-item">
-        <div class="contact-icon"><img src="solar--phone-linear.png" alt="" width="30px" style="padding-top: 0px;"></div>
+      <div class="contact-item reveal stagger-4">
+        <button class="contact-icon icon-btn" aria-label="Phone Icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        </button>
         <div>
           <strong>Call Me Now:</strong>
           <p>+91 7439067376</p>
         </div>
       </div>
 
-      <div class="social-icons">
-        <a href="https://www.facebook.com/share/1CvjFJCQqd/" target="_blank"><img src="bf.png" alt="Facebook" width="30px"></a>
-        <a href="https://www.kalpanaaasoftwaresolutions.com/" target="_blank"><img src="bbb.png" alt="Website" width="30px"></a>
-        <a href="https://www.instagram.com/gaurav__tripathireal?igsh=ZnoxdWo5NXlqeHA5" target="_blank"><img src="bi.png" alt="Instagram" width="30px"></a>
-        <a href="https://www.linkedin.com/in/gkumartripathi/" target="_blank"><img src="bl.png" alt="LinkedIn" width="30px"></a>
+      <div class="social-icons reveal stagger-5">
+        <a href="https://www.facebook.com/share/1CvjFJCQqd/" target="_blank" class="icon-toggleable icon-blue" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.378 14.192 5 15.115 5H18V0h-3.808C10.596 0 9 1.583 9 4.615V8z"/></svg>
+        </a>
+        <a href="https://www.kalpanaaasoftwaresolutions.com/" target="_blank" class="icon-toggleable icon-blue" aria-label="Website">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/gaurav__tripathireal?igsh=ZnoxdWo5NXlqeHA5" target="_blank" class="icon-toggleable icon-blue" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/gkumartripathi/" target="_blank" class="icon-toggleable icon-blue" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5H0v16h5V8zm7.982 0H8.014v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0V24H24V13.869c0-7.88-8.922-7.593-11.018-3.714V8z"/></svg>
+        </a>
       </div>
     </div>
 
-    <div class="contact-right">
+    <div class="contact-right reveal-right">
       <p class="contact-note">
         Tell me about your project, goals, or requirements. I'll get back to
         you within 24 hours to discuss the next steps.
@@ -177,7 +209,7 @@
   </section>
 
   <!-- ============ FOOTER ============ -->
-  <footer class="footer">
+  <footer class="footer section-footer-rise">
     <div class="footer-top">
       <nav class="footer-links">
         <a href="#home">Home</a>
@@ -186,16 +218,24 @@
         <a href="#contact">Contact</a>
       </nav>
       <div class="social-icons footer-social">
-        <a href="https://www.facebook.com/share/1CvjFJCQqd/" target="_blank"><img src="wf.png" alt="Facebook" width="30px"></a>
-        <a href="https://www.kalpanaaasoftwaresolutions.com/" target="_blank"><img src="wbb.png" alt="Website" width="20px"></a>
-        <a href="https://www.instagram.com/gaurav__tripathireal?igsh=ZnoxdWo5NXlqeHA5" target="_blank"><img src="wi.png" alt="Instagram" width="30px"></a>
-        <a href="https://www.linkedin.com/in/gkumartripathi/" target="_blank"><img src="wl.png" alt="LinkedIn" width="30px"></a>
+        <a href="https://www.facebook.com/share/1CvjFJCQqd/" target="_blank" class="icon-toggleable icon-white" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.378 14.192 5 15.115 5H18V0h-3.808C10.596 0 9 1.583 9 4.615V8z"/></svg>
+        </a>
+        <a href="https://www.kalpanaaasoftwaresolutions.com/" target="_blank" class="icon-toggleable icon-white" aria-label="Website">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/gaurav__tripathireal?igsh=ZnoxdWo5NXlqeHA5" target="_blank" class="icon-toggleable icon-white" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/gkumartripathi/" target="_blank" class="icon-toggleable icon-white" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5H0v16h5V8zm7.982 0H8.014v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0V24H24V13.869c0-7.88-8.922-7.593-11.018-3.714V8z"/></svg>
+        </a>
       </div>
     </div>
     <div class="footer-name">GAURAV KR TRIPATHI</div>
     <div class="footer-bottom">&copy; 2026 Gaurav Kumar Tripathi. All Rights Reserved.</div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
-
