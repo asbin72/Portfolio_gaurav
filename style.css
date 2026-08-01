@@ -313,13 +313,6 @@ img, .img-placeholder {
   color: #545b6b;
 }
 
-.hero-subtitle u {
-  text-decoration: underline;
-  text-decoration-color: #1769d5b3;
-  text-underline-offset: 7px;
-  text-decoration-thickness: 3px;
-}
-
 .hero-desc {
   color: #424753;
   font-size: 0.98rem;
