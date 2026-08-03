@@ -3,8 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Gaurav Kumar Tripathi — Founder, Managing Director & CTO of Kalpanaaa Software Solutions Pvt. Ltd. Building innovative software, web, mobile, and AI-powered solutions.">
 <title>Gaurav Kumar Tripathi | Founder, MD & CTO</title>
-<link rel="icon" type="image/png" href="Sat1.png">
+<link rel="icon" type="image/png" href="sample_4.jpeg">
+
+<!-- DNS prefetch for external resources -->
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+<!-- Critical CSS inline for instant first paint -->
+<style>
+  :root{--blue:#2f6fed;--blue-dark:#191C1E;--navy:#0a1836;--page-bg:#dbe6f7;--card-bg:#fff;--text-dark:#10151f;--text-body:#545b6b;--radius-lg:28px;--radius-md:16px;font-size:16px}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:80px}
+  body{font-family:'Poppins',system-ui,-apple-system,sans-serif;background:var(--page-bg);color:var(--text-dark);line-height:1.6}
+  .navbar{background:rgba(255,255,255,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);width:calc(100% - 40px);max-width:1300px;margin:0 auto;padding:8px 0;border-radius:16px;position:fixed;top:10px;left:20px;right:20px;z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,.04)}
+  .nav-inner{max-width:1300px;margin:0 auto;padding:0 40px;display:flex;align-items:center;justify-content:space-between}
+  .logo{font-family:'Anton',sans-serif;font-size:24px;font-weight:400;color:var(--blue)}
+  .card{background:var(--card-bg);border-radius:var(--radius-lg);max-width:1300px;margin:40px auto;padding:70px 80px}
+  .card.hero{margin-top:85px}
+  .hero{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+</style>
+
+<!-- Non-blocking font loading -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap"></noscript>
+
+<!-- Preload hero image -->
+<link rel="preload" as="image" href="Sat1_optimized.jpg">
+
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -55,7 +85,7 @@
       <a href="#contact" class="btn btn-primary btn-arrow">Message Me <span>&rarr;</span></a>
     </div>
     <div class="hero-image">
-      <img style="height: auto; width: 100%;" src="Sat1.png" alt="Gaurav Kumar Tripathi">
+      <img style="height: auto; width: 100%;" src="Sat1_optimized.jpg" alt="Gaurav Kumar Tripathi" width="1200" height="962" fetchpriority="high">
     </div>
   </section>
 
@@ -82,7 +112,7 @@
         <p class="quote reveal stagger-3">Everything I teach comes from real experience not theory.</p>
       </div>
       <div class="vision-right reveal-scale stagger-2">
-        <img src="sample_4.jpeg" alt="Vision">
+        <img src="sample_4.jpeg" alt="Vision" loading="lazy" decoding="async" width="500" height="333">
       </div>
     </div>
   </section>

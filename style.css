@@ -2,7 +2,7 @@
    GAURAV KUMAR TRIPATHI — PORTFOLIO STYLES
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap');
+/* Fonts loaded non-blocking from HTML */
 
 :root {
   --blue: #2f6fed;
@@ -30,7 +30,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
   background: var(--page-bg);
   color: var(--text-dark);
   line-height: 1.6;
@@ -96,6 +96,8 @@ img, .img-placeholder {
   margin: 40px auto;
   padding: 70px 80px;
   transition: box-shadow 0.4s ease;
+  will-change: transform, opacity;
+  contain: layout style;
 }
 
 .card:hover {
@@ -890,9 +892,18 @@ img, .img-placeholder {
 
 /* --- Section Level Transition Animations --- */
 
-/* Wipe Reveal (Hero) */
+/* Wipe Reveal (Hero) — scroll triggered */
 .card.section-wipe {
-  animation: fadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s ease;
+}
+
+.card.section-wipe.in-view {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Slide Up + Blur (Vision) */
@@ -1107,6 +1118,7 @@ img, .img-placeholder {
   }
 
   /* Disable heavy section-level transforms on mobile for smooth performance */
+  .card.section-wipe,
   .card.section-slide-blur,
   .card.section-curtain,
   .card.section-zoom-blur,

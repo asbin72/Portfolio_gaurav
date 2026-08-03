@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ─── 2. SECTION TRANSITION ANIMATIONS ON SCROLL ───
   const sectionEls = document.querySelectorAll(
-    '.section-slide-blur, .section-curtain, .section-zoom-blur, .section-footer-rise'
+    '.section-wipe, .section-slide-blur, .section-curtain, .section-zoom-blur, .section-footer-rise'
   );
 
   const sectionObserver = new IntersectionObserver(
@@ -118,7 +118,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  window.addEventListener('scroll', setActiveNav, { passive: true });
+  let scrollTicking = false;
+  window.addEventListener('scroll', () => {
+    if (!scrollTicking) {
+      requestAnimationFrame(() => {
+        setActiveNav();
+        scrollTicking = false;
+      });
+      scrollTicking = true;
+    }
+  }, { passive: true });
 
   // ─── 6. ANIMATED ICON CLICK TOGGLE (LOCATION, EMAIL, PHONE, SOCIAL) ───
   // Requirements: Clicking icon toggles:
